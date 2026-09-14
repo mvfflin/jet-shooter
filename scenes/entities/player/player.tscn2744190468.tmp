@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://do8pqabt7jn2u"]
+
+[ext_resource type="Texture2D" uid="uid://bjwi0a834ciqg" path="res://jetone2-removebg-preview.png" id="1_1hmtu"]
+
+[sub_resource type="GDScript" id="GDScript_1hmtu"]
+script/source = "extends CharacterBody2D
+
+@export_category(\"Stats\")
+@export var speed: int = 400
+
+var move_direction: Vector2 = Vector2.ZERO
+
+func _physics_process(delta: float) -> void:
+	movement_loop()
+	
+func movement_loop() -> void:
+	move_direction.x = int(Input.is_action_pressed(\"right\")) - int(Input.is_action_pressed(\"left\"))
+	move_direction.y = int(Input.is_action_pressed(\"down\")) - int(Input.is_action_pressed(\"up\"))
+	var motion: Vector2 = move_direction.normalized() * speed
+	set_velocity(motion)
+	move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kxuq"]
+radius = 95.047356
+
+[node name="Sigma" type="CharacterBody2D" unique_id=2084331487]
+script = SubResource("GDScript_1hmtu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1452782281]
+texture = ExtResource("1_1hmtu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1801597664]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_4kxuq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=59758978]

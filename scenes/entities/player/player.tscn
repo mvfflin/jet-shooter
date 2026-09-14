@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1mmbps2pxg5d"]
+
+[ext_resource type="Texture2D" uid="uid://bjwi0a834ciqg" path="res://jetone2-removebg-preview.png" id="1_1hmtu"]
+[ext_resource type="Script" uid="uid://cbl8atr24cu21" path="res://scenes/entities/player/player.gd" id="1_635qg"]
+[ext_resource type="PackedScene" uid="uid://bm45gjvlgh6e7" path="res://scenes/entities/gun/gun.tscn" id="3_58kc7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mti6b"]
+radius = 146.98639
+
+[node name="Player" type="CharacterBody2D" unique_id=1984269307]
+script = ExtResource("1_635qg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1037501467]
+rotation = 1.5707964
+texture = ExtResource("1_1hmtu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=223738468]
+shape = SubResource("CircleShape2D_mti6b")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=69565988]
+
+[node name="Gun" parent="." unique_id=290366279 instance=ExtResource("3_58kc7")]
+position = Vector2(148, 1)

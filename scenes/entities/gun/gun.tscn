@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bm45gjvlgh6e7"]
+
+[ext_resource type="Script" uid="uid://3p1c3fhxxd0s" path="res://scenes/entities/gun/gun.gd" id="1_bqgh4"]
+[ext_resource type="Texture2D" uid="uid://dcpjrvlafatg7" path="res://peluru.png" id="2_8vuk0"]
+
+[node name="Gun" type="Node2D" unique_id=290366279]
+script = ExtResource("1_bqgh4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=899316196]
+texture = ExtResource("2_8vuk0")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=110193952]
+position = Vector2(7, 0)

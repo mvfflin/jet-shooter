@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bcw5rn2002geh"]
+
+[ext_resource type="Texture2D" uid="uid://dcpjrvlafatg7" path="res://peluru.png" id="1_81e36"]
+[ext_resource type="Script" uid="uid://b3icx3pdbi8iw" path="res://scenes/entities/bullet/bullet.gd" id="1_rbbaa"]
+
+[node name="Bullet" type="Node2D" unique_id=1780765214]
+script = ExtResource("1_rbbaa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1774228090]
+scale = Vector2(0.17499952, 0.225845)
+texture = ExtResource("1_81e36")
