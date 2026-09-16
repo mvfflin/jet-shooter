@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dgr037xw3aqrp"]
+
+[ext_resource type="Script" uid="uid://hkx4vhbg700c" path="res://scripts/entities/aliens/alien_base.gd" id="1_pmlml"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lr0yo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yck6r"]
+radius = 11.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1130578080]
+collision_layer = 2
+script = ExtResource("1_pmlml")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=959601442]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=150755093]
+shape = SubResource("CircleShape2D_lr0yo")
+
+[node name="HitboxArea" type="Area2D" parent="." unique_id=1222348482]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea" unique_id=941815124]
+shape = SubResource("CircleShape2D_yck6r")
+debug_color = Color(0.9807065, 0, 0.38138524, 0.41960785)

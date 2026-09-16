@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://102ngcm762rd"]
+
+[ext_resource type="Script" uid="uid://cx08xmk7ljhfw" path="res://scripts/managers/wave_manager.gd" id="1"]
+[ext_resource type="Script" uid="uid://b5maonv1brqqf" path="res://scenes/main.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://1mmbps2pxg5d" path="res://scenes/entities/player/player.tscn" id="2"]
+[ext_resource type="Script" uid="uid://cvrhlrpienk2x" path="res://resources/wave_config.gd" id="3_jyhfs"]
+[ext_resource type="Resource" uid="uid://cah88cecv6x66" path="res://resources/waves/wave_1.tres" id="4_jyhfs"]
+
+[node name="Main" type="Node2D" unique_id=883856290]
+script = ExtResource("1_tbgi4")
+
+[node name="YSort" type="Node2D" parent="." unique_id=679099556]
+y_sort_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=389450391]
+
+[node name="Player" parent="." unique_id=373738498 instance=ExtResource("2")]
+position = Vector2(400, 300)
+
+[node name="WaveManager" type="Node" parent="." unique_id=1599154272]
+script = ExtResource("1")
+wave_configs = Array[ExtResource("3_jyhfs")]([ExtResource("4_jyhfs")])

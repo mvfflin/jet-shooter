@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcpjrvlafatg7"
-path="res://.godot/imported/peluru.png-b1fa48fa1cde4b4742333abeb0ed4560.ctex"
+path="res://.godot/imported/peluru.png-e2aadaf41e5cd9bdddc6ab3b54f420ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://peluru.png"
-dest_files=["res://.godot/imported/peluru.png-b1fa48fa1cde4b4742333abeb0ed4560.ctex"]
+source_file="res://assets/sprites/entities/bullet/peluru.png"
+dest_files=["res://.godot/imported/peluru.png-e2aadaf41e5cd9bdddc6ab3b54f420ed.ctex"]
 
 [params]
 

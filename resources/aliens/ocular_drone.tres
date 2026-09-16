@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AlienData" format=3 uid="uid://bujs75ww8fkw2"]
+
+[ext_resource type="Texture2D" uid="uid://dcpjrvlafatg7" path="res://assets/sprites/entities/bullet/peluru.png" id="1_81e36"]
+[ext_resource type="Script" uid="uid://bsr5hy8pfgj1o" path="res://resources/alien_data.gd" id="1_nehg3"]
+
+[resource]
+script = ExtResource("1_yji58")
+type = 1
+name = "Ocular Drone"
+max_hp = 1.0
+speed = 180.0
+texture = ExtResource("1_81e36")
+color = Color(1, 1, 1, 1)
+
+metadata/_custom_type_script = "uid://bsr5hy8pfgj1o"

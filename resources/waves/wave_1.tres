@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WaveConfig" format=3 uid="uid://cah88cecv6x66"]
+
+[ext_resource type="Script" uid="uid://cvrhlrpienk2x" path="res://resources/wave_config.gd" id="1_wave"]
+[ext_resource type="Script" uid="uid://bsr5hy8pfgj1o" path="res://resources/alien_data.gd" id="1_we5xl"]
+[ext_resource type="Resource" uid="uid://ca2pq7r1kgrqg" path="res://resources/aliens/skitter.tres" id="2_skitter"]
+
+[resource]
+script = ExtResource("1_wave")
+spawn_alien_chance = 0.15
+allowed_aliens = Array[ExtResource("1_we5xl")]([ExtResource("2_skitter")])

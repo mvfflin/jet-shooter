@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="jet-shooter"
-run/main_scene="uid://1mmbps2pxg5d"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DataManager="*uid://da7g672uj3rr1"
+
+[collision]
+
+2d/use_jolt_physics=true
 
 [display]
 
@@ -47,6 +55,10 @@ shoot={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d/roles="Player,Enemy,Projectile,Asteroid,Pickup"
 
 [physics]
 
