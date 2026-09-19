@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cag5of5vtj0r7"]
+
+[ext_resource type="Script" uid="uid://btynkd0t3xao" path="res://Boss/Script/bullet.gd" id="1_oduel"]
+[ext_resource type="Texture2D" uid="uid://dd6pxl526m766" path="res://Boss/Assets/weapon PNG/arm_projectile_glowing.png" id="2_ycag2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6afsh"]
+atlas = ExtResource("2_ycag2")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odot3"]
+atlas = ExtResource("2_ycag2")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8o6v"]
+atlas = ExtResource("2_ycag2")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qttmj"]
+atlas = ExtResource("2_ycag2")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkcvl"]
+atlas = ExtResource("2_ycag2")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiu8q"]
+atlas = ExtResource("2_ycag2")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k56px"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6afsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odot3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8o6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qttmj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkcvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiu8q")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkdpk"]
+size = Vector2(58, 21.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfm2c"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="bullet" type="Area2D" unique_id=1114465519]
+collision_layer = 2
+script = ExtResource("1_oduel")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1200767178]
+scale = Vector2(1.58, 1.51)
+sprite_frames = SubResource("SpriteFrames_k56px")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2016261653]
+position = Vector2(43, -19.75)
+shape = SubResource("RectangleShape2D_vkdpk")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1494087013]
+offset_left = 14.0
+offset_top = -33.0
+offset_right = 72.0
+offset_bottom = -6.0
+scale = Vector2(1, 0.1)
+theme_override_styles/fill = SubResource("StyleBoxFlat_bfm2c")
+value = 100.0
+show_percentage = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
