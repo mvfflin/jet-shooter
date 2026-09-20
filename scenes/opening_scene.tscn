@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ckr8tac6uckig"]
 
 [ext_resource type="Script" uid="uid://c1mia32js067h" path="res://scenes/opening_scene.gd" id="1_2w8es"]
-[ext_resource type="FontFile" uid="uid://ml8lq3hqc5lk" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd.otf" id="1_yrpo6"]
+[ext_resource type="FontFile" uid="uid://3fpnqtpngadn" path="res://assets/sprites/fonts/news-cycle/newscycle-regular.ttf" id="2_vtxer"]
 [ext_resource type="Shader" uid="uid://c5gnaqc8onwcr" path="res://shaders/perspective_crawl.gdshader" id="3_61xuo"]
 [ext_resource type="Texture2D" uid="uid://0ese7pgtvril" path="res://assets/dev_logo.png" id="3_vtxer"]
-[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="4_j2imu"]
+[ext_resource type="FontFile" uid="uid://cwooec5261oni" path="res://assets/sprites/fonts/news-cycle/newscycle-bold.ttf" id="4_3cuo6"]
 [ext_resource type="Shader" uid="uid://cjtn5ssqls2ds" path="res://shaders/glitch.gdshader" id="5_6xt31"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6xt31"]
@@ -45,7 +45,7 @@ offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.29454538, 0.6452718, 0.9401083, 1)
-theme_override_fonts/font = ExtResource("1_yrpo6")
+theme_override_fonts/font = ExtResource("2_vtxer")
 text = "A long time ago in a galaxy far,
 far away...."
 
@@ -93,7 +93,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.6508179, 0.58789104, 0.06578918, 1)
-theme_override_fonts/normal_font = ExtResource("4_j2imu")
+theme_override_fonts/normal_font = ExtResource("4_3cuo6")
 theme_override_font_sizes/normal_font_size = 37
 text = "Long before humanity learned to reach the stars, the universe was already home to an ancient race known as the Star Children. They were not gods, but they were the closest thing the universe had ever created to them. Born from the light of dying stars, the Star Children possessed an extraordinary ability: they could create stars. Wherever they traveled, dead systems came back to life. Frozen planets warmed, and new worlds were born beneath newborn suns.
 
