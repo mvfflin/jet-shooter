@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="jet-shooter"
-run/main_scene="uid://102ngcm762rd"
+run/main_scene="uid://ckr8tac6uckig"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://takdqm2ncjs5"
 
 [audio]
 

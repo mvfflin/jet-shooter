@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dr44yn4vpdfyg"
-path="res://.godot/imported/NewsGothicStd-Oblique.otf-223b55f34ee66305e46a65e7f6cb88c0.fontdata"
+uid="uid://cwooec5261oni"
+path="res://.godot/imported/newscycle-bold.ttf-28350a082dbef8496c263902345b684a.fontdata"
 
 [deps]
 
-source_file="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Oblique.otf"
-dest_files=["res://.godot/imported/NewsGothicStd-Oblique.otf-223b55f34ee66305e46a65e7f6cb88c0.fontdata"]
+source_file="res://assets/sprites/fonts/news-cycle/newscycle-bold.ttf"
+dest_files=["res://.godot/imported/newscycle-bold.ttf-28350a082dbef8496c263902345b684a.fontdata"]
 
 [params]
 

@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://ca2pq7r1kgrqg" path="res://resources/aliens/skitter.tres" id="2_skitter"]
 [ext_resource type="Resource" uid="uid://bujs75ww8fkw2" path="res://resources/aliens/ocular_drone.tres" id="3_ocular"]
 [ext_resource type="Resource" uid="uid://0t3ec6dc445s" path="res://resources/aliens/spawnling.tres" id="4_spawnling"]
-[ext_resource type="Resource" uid="uid://bx07fsi0pyahv" path="res://resources/aliens/leech_spore.tres" id="6_spore"]
+[ext_resource type="Resource" uid="uid://dhbjr8wgbi7ks" path="res://resources/aliens/ring_wisp.tres" id="5_ring"]
 
 [resource]
 script = ExtResource("2_3u74c")
@@ -13,10 +13,10 @@ wave_name = "BOSS WAVE"
 wave_number = 5
 duration_seconds = 9999.0
 spawn_alien_chance = 0.7
-start_alien_interval = Vector2(1, 2)
-end_alien_interval = Vector2(0.5, 0.7)
+start_alien_interval = Vector2(1.5, 2.5)
+end_alien_interval = Vector2(1, 1.25)
 initial_asteroids_count = 0
 start_asteroid_interval = Vector2(3.5, 4.5)
 end_asteroid_interval = Vector2(2, 3.5)
-allowed_aliens = Array[ExtResource("1_tk6o1")]([ExtResource("2_skitter"), ExtResource("3_ocular"), ExtResource("4_spawnling"), ExtResource("4_spawnling"), ExtResource("6_spore")])
+allowed_aliens = Array[ExtResource("1_tk6o1")]([ExtResource("2_skitter"), ExtResource("3_ocular"), ExtResource("4_spawnling"), ExtResource("4_spawnling"), ExtResource("5_ring")])
 metadata/_custom_type_script = "uid://cvrhlrpienk2x"

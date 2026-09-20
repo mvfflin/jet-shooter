@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c3egug661hhe8"]
 
 [ext_resource type="Script" uid="uid://rdu5bv5c04qs" path="res://scenes/winning_credit.gd" id="1_4fjle"]
-[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="2_to7kg"]
-[ext_resource type="FontFile" uid="uid://ml8lq3hqc5lk" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd.otf" id="3_jfioh"]
+[ext_resource type="FontFile" uid="uid://cwooec5261oni" path="res://assets/sprites/fonts/news-cycle/newscycle-bold.ttf" id="2_4fjle"]
+[ext_resource type="FontFile" uid="uid://3fpnqtpngadn" path="res://assets/sprites/fonts/news-cycle/newscycle-regular.ttf" id="3_to7kg"]
 
 [node name="WinningCredit" type="Control" unique_id=1722239446]
 process_mode = 3
@@ -43,20 +43,16 @@ alignment = 1
 [node name="TitleLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=207863914]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
-theme_override_fonts/font = ExtResource("2_to7kg")
+theme_override_fonts/font = ExtResource("2_4fjle")
 theme_override_font_sizes/font_size = 36
 text = "THANK YOU FOR PLAYING"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spacer" type="Control" parent="CreditContent/VBoxContainer" unique_id=1683529480]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-
 [node name="DevHeaderLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=860329793]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "DEVELOPED BY"
 horizontal_alignment = 1
@@ -64,20 +60,20 @@ vertical_alignment = 1
 
 [node name="DevNameLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=479758300]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
 text = "TEAM TAMBAHKAN TEKS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer3" type="Control" parent="CreditContent/VBoxContainer" unique_id=1797616409]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="LeadHeaderLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=1856736903]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "TEAM LEADER"
 horizontal_alignment = 1
@@ -85,20 +81,20 @@ vertical_alignment = 1
 
 [node name="LeadNameLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=687121380]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
 text = "REFAN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer4" type="Control" parent="CreditContent/VBoxContainer" unique_id=1412452304]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="GdHeaderLabel2" type="Label" parent="CreditContent/VBoxContainer" unique_id=1118025969]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "GAME DESIGN"
 horizontal_alignment = 1
@@ -106,20 +102,20 @@ vertical_alignment = 1
 
 [node name="GdNameLabel2" type="Label" parent="CreditContent/VBoxContainer" unique_id=1101469510]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
 text = "DEAN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer2" type="Control" parent="CreditContent/VBoxContainer" unique_id=975543129]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="ProgramHeaderLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=1900084327]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "PROGRAMMER"
 horizontal_alignment = 1
@@ -127,7 +123,7 @@ vertical_alignment = 1
 
 [node name="ProgramNameLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=1164136514]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
 text = "REFAN
 DEAN
@@ -136,13 +132,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer5" type="Control" parent="CreditContent/VBoxContainer" unique_id=2066736104]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="ArtistHeaderLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=76655282]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "GAME ARTIST"
 horizontal_alignment = 1
@@ -150,7 +146,7 @@ vertical_alignment = 1
 
 [node name="ArtistNameLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=781752708]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
 text = "REFAN
 ABBA
@@ -159,13 +155,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer6" type="Control" parent="CreditContent/VBoxContainer" unique_id=840218273]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="SoundHeaderLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=1539775461]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "SOUND DESIGNER"
 horizontal_alignment = 1
@@ -173,20 +169,20 @@ vertical_alignment = 1
 
 [node name="SoundNameLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=149113459]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
 text = "ABBA"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Spacer7" type="Control" parent="CreditContent/VBoxContainer" unique_id=1239696017]
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="CreditHeaderLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=709872186]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 18
 text = "CREDITS"
 horizontal_alignment = 1
@@ -194,9 +190,11 @@ vertical_alignment = 1
 
 [node name="CreditNameLabel" type="Label" parent="CreditContent/VBoxContainer" unique_id=1060827722]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_jfioh")
+theme_override_fonts/font = ExtResource("3_to7kg")
 theme_override_font_sizes/font_size = 26
-text = "BOSS GLITCH - DRAGON STUDIO"
+text = "BOSS GLITCH - DRAGON STUDIO
+STAR JEDI - BOBA FONTS
+NEWS CYCLE -NATHAN WILLIS"
 horizontal_alignment = 1
 vertical_alignment = 1
 

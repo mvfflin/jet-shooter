@@ -4,6 +4,7 @@ extends Area2D
 @export var xp_amount: int = 2
 @export var move_speed: float = 300.0
 @export var magnet_radius: float = 120.0
+@export var exp: AudioStream = preload("res://assets/sounds/sfx/exp.wav")
 
 var player: Node2D = null
 var is_collecting: float = false
@@ -41,7 +42,9 @@ func _collect() -> void:
 	is_collecting = true
 	
 	print("DEBUGLOG XPOrb: TERAMBIL oleh Player! Memberikan XP: ", xp_amount)
-	
+
+	AudioManager.play_sfx(exp)
+
 	# Tambahkan XP ke DataManager
 	if DataManager and DataManager.has_method("add_xp"):
 		DataManager.add_xp(xp_amount)

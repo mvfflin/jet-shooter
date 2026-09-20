@@ -42,21 +42,17 @@ func _fire_beam() -> void:
 		if is_instance_valid(hit_target) and not hit_targets.has(hit_target):
 			hit_targets.append(hit_target)
 			
-			# 1. Damage Dasar Laser
 			if hit_target.has_method("take_damage"):
 				hit_target.take_damage(damage)
 			elif hit_target.has_method("destroy"):
 				hit_target.destroy()
 
-			# 2. TRAIT ICE: Membekukan target yang dilewati sinar laser
 			if traits.has(UpgradeData.WeaponType.ICE) and hit_target.has_method("apply_freeze"):
 				hit_target.apply_freeze(2.0)
 
-			# 3. TRAIT BOMB: Meledakkan area sekitar musuh yang terkena sinar laser
 			if traits.has(UpgradeData.WeaponType.BOMB):
 				_trigger_laser_explosion(hit_target.global_position)
 
-		# Abaikan collider ini agar raycast menembus musuh di belakangnya (True Pierce)
 		ray_cast.add_exception(collider)
 		ray_cast.force_raycast_update()
 

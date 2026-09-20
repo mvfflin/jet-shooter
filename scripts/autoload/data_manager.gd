@@ -11,7 +11,7 @@ signal hyperspace_ready()
 var max_hp: float = 5.0
 var current_hp: float = 5.0
 
-var attack_damage: float = 1.0
+var attack_damage: float = 2.0
 var fire_rate: float = 0.5
 var move_speed: float = 300.0
 var magnet_radius: float = 120.0
@@ -25,7 +25,7 @@ var passive_energy_rate: float = 20.0
 # Progression Stats
 var current_level: int = 1
 var current_xp: int = 0
-var xp_to_next_level: int = 50
+var xp_to_next_level: int = 100
 var waves_survived: int = 0
 
 # Multi-Weapon Trait System & Progression Tracking
@@ -40,13 +40,13 @@ func reset_data() -> void:
 	
 	current_level = 1
 	current_xp = 0
-	xp_to_next_level = 150
+	xp_to_next_level = 100
 	waves_survived = 0
 	
 	max_hp = 5.0
 	current_hp = max_hp
 	
-	attack_damage = 1.0
+	attack_damage = 2.0
 	fire_rate = 0.5
 	move_speed = 300.0
 	magnet_radius = 120.0
@@ -104,7 +104,7 @@ func add_xp(amount: int) -> void:
 	while current_xp >= xp_to_next_level:
 		current_xp -= xp_to_next_level
 		current_level += 1
-		xp_to_next_level = int(xp_to_next_level * 1.25)
+		xp_to_next_level = int(xp_to_next_level * 1.2)
 		
 		print("DEBUGLOG DataManager: LEVEL UP! Sekarang Level ", current_level)
 		level_up.emit(current_level)

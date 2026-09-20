@@ -7,7 +7,7 @@
 script = ExtResource("1_xss44")
 type = 3
 name = "Ring Wisp"
-max_hp = 1.5
+max_hp = 5.0
 speed = 120.0
 texture = ExtResource("2_nmso1")
 color = Color(0.68, 0.49696672, 0.03400001, 1)

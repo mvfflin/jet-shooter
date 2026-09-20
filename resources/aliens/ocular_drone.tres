@@ -7,7 +7,7 @@
 script = ExtResource("1_nehg3")
 type = 1
 name = "Ocular Drone"
-max_hp = 2.0
+max_hp = 5.0
 speed = 180.0
 texture = ExtResource("2_nh4ay")
 color = Color(0.5411765, 0.16862746, 0.8862745, 1)

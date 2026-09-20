@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vyybb55i0o7h"]
 
 [ext_resource type="Script" uid="uid://31673ixceump" path="res://scenes/ui/upgrade_scene.gd" id="1_rbmv3"]
-[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="2_wjri6"]
+[ext_resource type="FontFile" uid="uid://cwooec5261oni" path="res://assets/sprites/fonts/news-cycle/newscycle-bold.ttf" id="2_wjri6"]
 
 [node name="UpgradeScene" type="CanvasLayer" unique_id=742733749]
 process_mode = 3

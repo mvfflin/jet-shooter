@@ -101,7 +101,3 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=286197730 instance=ExtResource("25_og1vs")]
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1501435398]
-offset_right = 2170.0
-offset_bottom = 1321.0

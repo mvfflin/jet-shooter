@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsyn0k8ch35nx"]
 
 [ext_resource type="Script" uid="uid://catos8wxq01g5" path="res://scenes/ui/dialog_box.gd" id="1_i22jp"]
-[ext_resource type="FontFile" uid="uid://ml8lq3hqc5lk" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd.otf" id="1_svbij"]
+[ext_resource type="FontFile" uid="uid://3fpnqtpngadn" path="res://assets/sprites/fonts/news-cycle/newscycle-regular.ttf" id="2_i22jp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yck6r"]
 
@@ -45,7 +45,7 @@ theme_override_constants/margin_bottom = 25
 [node name="DialogLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=98699215]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_svbij")
+theme_override_fonts/font = ExtResource("2_i22jp")
 theme_override_font_sizes/font_size = 20
 text = "TEXT"
 vertical_alignment = 1

@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_yji58")
 name = "Skitter"
-speed = 190.0
+speed = 250.0
 texture = ExtResource("1_81e36")
 color = Color(0.35773996, 0.93, 0.26970002, 1)
 sprite_size = 20

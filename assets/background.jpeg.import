@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi1xu43sdtrat"
-path="res://.godot/imported/jetone2.png-92da36ebc1ce7238db9680e972937be4.ctex"
+uid="uid://dkarvb0t664hm"
+path="res://.godot/imported/background.jpeg-4ace736b3b1fbe75ada471cd9290ae90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://jetone2.png"
-dest_files=["res://.godot/imported/jetone2.png-92da36ebc1ce7238db9680e972937be4.ctex"]
+source_file="res://assets/background.jpeg"
+dest_files=["res://.godot/imported/background.jpeg-4ace736b3b1fbe75ada471cd9290ae90.ctex"]
 
 [params]
 

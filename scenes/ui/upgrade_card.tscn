@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://87suhn0m4kcl"]
 
 [ext_resource type="Script" uid="uid://c8rco4rua814a" path="res://scenes/ui/upgrade_card.gd" id="1_jq2e7"]
-[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="2_40ijt"]
+[ext_resource type="FontFile" uid="uid://cwooec5261oni" path="res://assets/sprites/fonts/news-cycle/newscycle-bold.ttf" id="2_ay13x"]
+[ext_resource type="FontFile" uid="uid://3fpnqtpngadn" path="res://assets/sprites/fonts/news-cycle/newscycle-regular.ttf" id="3_qdprk"]
 
 [node name="Control" type="PanelContainer" unique_id=132091681]
 offset_right = 180.0
@@ -21,7 +22,7 @@ layout_mode = 2
 [node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=872842069]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_40ijt")
+theme_override_fonts/font = ExtResource("2_ay13x")
 theme_override_font_sizes/font_size = 20
 text = "Title"
 horizontal_alignment = 1
@@ -36,6 +37,7 @@ metadata/_edit_lock_ = true
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=590851980]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qdprk")
 theme_override_font_sizes/font_size = 8
 text = "Desc"
 autowrap_mode = 3

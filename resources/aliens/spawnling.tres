@@ -7,7 +7,7 @@
 script = ExtResource("1_wulk7")
 type = 2
 name = "Spawnling"
-max_hp = 10.0
+max_hp = 15.0
 speed = 60.0
 texture = ExtResource("2_uww5e")
 color = Color(0.68, 0.07480001, 0.08488651, 1)

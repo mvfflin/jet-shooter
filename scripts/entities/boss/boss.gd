@@ -11,7 +11,7 @@ signal boss_defeated
 var direction: Vector2 = Vector2.ZERO
 var DEF: int = 0
 
-var health: float = 50.0:
+var health: float = 100.0:
 	set(value):
 		health = value
 		if progress_bar:

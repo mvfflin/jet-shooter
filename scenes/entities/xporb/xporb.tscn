@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://blnum1q8austy"]
 
 [ext_resource type="Script" uid="uid://dna3j655smprj" path="res://scripts/entities/xporb/xporb.gd" id="1_78j5x"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_yuco2"]
+[ext_resource type="Texture2D" uid="uid://ivhc6alu85gn" path="res://assets/sprites/entities/exp/exp.png" id="2_78j5x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yck6r"]
 radius = 5.8309517
@@ -11,9 +11,9 @@ collision_layer = 8
 script = ExtResource("1_78j5x")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1242453801]
-position = Vector2(-9.536743e-07, -1.9073486e-06)
-scale = Vector2(0.06640625, 0.07031249)
-texture = ExtResource("1_yuco2")
+position = Vector2(-8.6426735e-07, 0.5)
+scale = Vector2(0.75000006, 0.8125)
+texture = ExtResource("2_78j5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=63449784]
 shape = SubResource("CircleShape2D_yck6r")
