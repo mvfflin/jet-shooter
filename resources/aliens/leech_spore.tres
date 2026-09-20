@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="AlienData" format=3 uid="uid://bx07fsi0pyahv"]
+
+[ext_resource type="Script" uid="uid://bsr5hy8pfgj1o" path="res://resources/alien_data.gd" id="1_28qfy"]
+[ext_resource type="Texture2D" uid="uid://x4x1jrbe86y8" path="res://assets/sprites/entities/aliens/leech_spore.png" id="2_c71tw"]
+
+[resource]
+script = ExtResource("1_28qfy")
+type = 2
+name = "Leech Spore"
+max_hp = 20.0
+speed = 10.0
+texture = ExtResource("2_c71tw")
+color = Color(0, 1, 1, 1)
+sprite_size = 54
+hitbox_radius = 22
+xp_value = 40
+death_shake_intensity = 6.0
+death_shake_duration = 0.15
+death_zoom_punch = 0.03
+death_particle_count = 24
+death_particle_color = Color(0.2, 0.8, 0.2, 1)
+death_particle_scale = 1.4
+metadata/_custom_type_script = "uid://bsr5hy8pfgj1o"

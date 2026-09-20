@@ -1,8 +1,7 @@
-# Ini fitur xp mungkin bisa kepakek nanti? Buat upgrade misal?
 class_name XPOrb
 extends Area2D
 
-@export var xp_amount: int = 10
+@export var xp_amount: int = 2
 @export var move_speed: float = 300.0
 @export var magnet_radius: float = 120.0
 

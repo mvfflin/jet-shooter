@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0nnybprmcw7q"]
+
+[ext_resource type="Script" uid="uid://bh0hgejnt8qw1" path="res://scripts/entities/bullet/laser_beam.gd" id="1_55b31"]
+
+[node name="LaserBeam" type="Node2D" unique_id=213067661]
+script = ExtResource("1_55b31")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=45535364]
+target_position = Vector2(1200, 0)
+collide_with_areas = true
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1962526203]
+default_color = Color(0.582697, 0.0016478044, 0.76897776, 1)
+begin_cap_mode = 2
+end_cap_mode = 2

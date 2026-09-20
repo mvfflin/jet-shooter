@@ -1,6 +1,8 @@
 class_name WaveConfig
 extends Resource
 
+# Wave name
+@export var wave_name: String = ""
 # Wave ke berapa
 @export var wave_number: int = 1
 # Durasi wave nya

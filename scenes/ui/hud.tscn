@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cbrd6a6fwu2to"]
+
+[ext_resource type="Script" uid="uid://d15vf06lnh0fk" path="res://scenes/ui/hud.gd" id="1_bo48s"]
+[ext_resource type="Texture2D" uid="uid://c416drq0jddhg" path="res://assets/sprites/ui/em.png" id="2_bo48s"]
+[ext_resource type="Texture2D" uid="uid://csyjgfmyeu72q" path="res://assets/sprites/ui/ef.png" id="3_8qguk"]
+
+[node name="Hud" type="Control" unique_id=1467355989]
+custom_minimum_size = Vector2(200, 42)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 176.0
+offset_bottom = 35.0
+script = ExtResource("1_bo48s")
+
+[node name="PlayerStatsPanel" type="VBoxContainer" parent="." unique_id=1336585201]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 35.0
+
+[node name="HPContainer" type="HBoxContainer" parent="PlayerStatsPanel" unique_id=1434184599]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+
+[node name="EnergyBar" type="TextureProgressBar" parent="PlayerStatsPanel" unique_id=1112503709]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+nine_patch_stretch = true
+texture_under = ExtResource("2_bo48s")
+texture_progress = ExtResource("3_8qguk")

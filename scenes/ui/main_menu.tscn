@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://dqhngu47afhsp"]
+
+[ext_resource type="Script" uid="uid://bscepksvohru4" path="res://scenes/ui/main_menu.gd" id="1_m1kxf"]
+[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="2_fe2o3"]
+[ext_resource type="Texture2D" uid="uid://cn2oy45c6qjds" path="res://assets/logo.png" id="2_m1kxf"]
+[ext_resource type="Texture2D" uid="uid://dh4wqcxel7k0s" path="res://assets/backgroundx.png" id="2_x2yvf"]
+[ext_resource type="FontFile" uid="uid://ml8lq3hqc5lk" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd.otf" id="3_1g8jr"]
+
+[node name="MainMenu" type="Control" unique_id=1349631191]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m1kxf")
+
+[node name="Background" type="TextureRect" parent="." unique_id=500905448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x2yvf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1309020809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=239599867]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1339306597]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+texture = ExtResource("2_m1kxf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=945544291]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=664814259]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=1397062854]
+layout_mode = 2
+text = "PLAY"
+
+[node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=1772864685]
+layout_mode = 2
+text = "CREDITS"
+
+[node name="GuideButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=611283690]
+layout_mode = 2
+text = "GUIDE"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=1660002953]
+layout_mode = 2
+text = "QUIT"
+
+[node name="CreditsPanel" type="PanelContainer" parent="." unique_id=1810739636]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsPanel" unique_id=586925345]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsPanel/MarginContainer" unique_id=899051082]
+layout_mode = 2
+
+[node name="CreditsTitle" type="Label" parent="CreditsPanel/MarginContainer/VBoxContainer" unique_id=1874969520]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8509804, 0.6431373, 0.11764706, 1)
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 32
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsContent" type="RichTextLabel" parent="CreditsPanel/MarginContainer/VBoxContainer" unique_id=1000103184]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_constants/paragraph_separation = 16
+theme_override_fonts/normal_font = ExtResource("3_1g8jr")
+theme_override_font_sizes/normal_font_size = 20
+text = "THIS GAME IS MADE BY TEAM TAMBAHKAN TEKS:
+PROGRAMMER:
+1. Dean (@derimisen)
+2. Tihul
+3. "
+
+[node name="CloseCreditsBtn" type="Button" parent="CreditsPanel/MarginContainer/VBoxContainer" unique_id=2109557393]
+layout_mode = 2
+text = "CLOSE"
+
+[node name="GuidePanel" type="PanelContainer" parent="." unique_id=1381786917]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GuidePanel" unique_id=1653235853]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuidePanel/MarginContainer" unique_id=2070617536]
+layout_mode = 2
+
+[node name="GuideTitle" type="Label" parent="GuidePanel/MarginContainer/VBoxContainer" unique_id=507463974]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8509804, 0.6431373, 0.11764706, 1)
+theme_override_fonts/font = ExtResource("2_fe2o3")
+theme_override_font_sizes/font_size = 32
+text = "GUIDE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuideContent" type="RichTextLabel" parent="GuidePanel/MarginContainer/VBoxContainer" unique_id=1871368932]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_constants/paragraph_separation = 16
+theme_override_fonts/normal_font = ExtResource("3_1g8jr")
+theme_override_font_sizes/normal_font_size = 20
+text = "KONTROL:
+W A S D -> Move
+Mouse -> Aim
+Space/Right Click -> Hyperspace"
+
+[node name="CloseGuideBtn" type="Button" parent="GuidePanel/MarginContainer/VBoxContainer" unique_id=1170610642]
+layout_mode = 2
+text = "CLOSE"

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bhef244eogsbt"]
+
+[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="1_0lmf7"]
+[ext_resource type="Script" uid="uid://djmjg5q3cs4tj" path="res://scenes/ui/pause_menu.gd" id="1_f6eus"]
+[ext_resource type="FontFile" uid="uid://ml8lq3hqc5lk" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd.otf" id="2_f6eus"]
+
+[node name="PauseMenu" type="Control" unique_id=286197730]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6eus")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2136399760]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.29411766)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=891090855]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=895002653]
+layout_mode = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=244865525]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8509804, 0.6431373, 0.11764706, 1)
+theme_override_fonts/font = ExtResource("1_0lmf7")
+theme_override_font_sizes/font_size = 32
+text = "PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1758701493]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_f6eus")
+text = "Current Wave: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1753558164]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=859483311]
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=849004620]
+layout_mode = 2
+text = "RESUME"
+
+[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=1433289427]
+layout_mode = 2
+text = "RESTART"
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/VBoxContainer/MenuButtons" unique_id=217545650]
+layout_mode = 2
+text = "MAIN MENU"

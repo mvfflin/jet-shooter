@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ct5i7earw8hgd"]
+
+[ext_resource type="Script" uid="uid://bka5m6i1x72lj" path="res://scripts/effects/motion_trail.gd" id="1_rdhov"]
+
+[sub_resource type="Curve" id="Curve_yck6r"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.99999, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_g6snk"]
+colors = PackedColorArray(0.30631503, 0.88846993, 0.80489206, 1, 1, 1, 1, 0)
+
+[node name="MotionTrail" type="Line2D" unique_id=1825370054]
+top_level = true
+width = 6.0
+width_curve = SubResource("Curve_yck6r")
+gradient = SubResource("Gradient_g6snk")
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("1_rdhov")

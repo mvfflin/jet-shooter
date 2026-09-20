@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://1mmbps2pxg5d"]
 
 [ext_resource type="Script" uid="uid://cgmsdbxsyqp4l" path="res://scripts/entities/player/player.gd" id="1_635qg"]
-[ext_resource type="Texture2D" uid="uid://bjwi0a834ciqg" path="res://assets/sprites/entities/player/jetone2-removebg-preview.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://bx0kqo8vxvnut" path="res://assets/sprites/entities/player/player1.png" id="2_635qg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_body"]
 radius = 20.0
@@ -10,24 +10,28 @@ radius = 20.0
 radius = 24.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1363603395 groups=["Player"]]
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("1_635qg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=801967719]
-position = Vector2(3, 2.0000153)
+position = Vector2(-1.1920929e-07, 1)
 rotation = 1.570796
-scale = Vector2(0.106583476, 0.09881402)
-texture = ExtResource("2")
+scale = Vector2(0.03529892, 0.033865824)
+texture = ExtResource("2_635qg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108714645]
 shape = SubResource("CircleShape2D_body")
+metadata/_edit_lock_ = true
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1397094243]
 position = Vector2(21, 1)
+metadata/_edit_lock_ = true
 
 [node name="HitboxArea" type="Area2D" parent="." unique_id=1005541273]
 collision_mask = 10
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea" unique_id=1793489485]
 shape = SubResource("CircleShape2D_hitbox")
 debug_color = Color(0.9784995, 0, 0.39946595, 0.41960785)
+metadata/_edit_lock_ = true

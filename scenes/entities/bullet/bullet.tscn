@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://bcw5rn2002geh"]
 
 [ext_resource type="Texture2D" uid="uid://dcpjrvlafatg7" path="res://assets/sprites/entities/bullet/peluru.png" id="1_81e36"]
-[ext_resource type="Script" uid="uid://b3icx3pdbi8iw" path="res://scripts/entities/bullet/bullet.gd" id="1_rbbaa"]
+[ext_resource type="Script" uid="uid://b3icx3pdbi8iw" path="res://scripts/entities/bullet/bullet_base.gd" id="1_rbbaa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ma4wa"]
 size = Vector2(16, 10)
 
 [node name="Bullet" type="Area2D" unique_id=342366789]
 position = Vector2(-3, 2)
-collision_layer = 4
-collision_mask = 7
+collision_layer = 8
+collision_mask = 15
 script = ExtResource("1_rbbaa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2013461235]
@@ -22,5 +22,6 @@ position = Vector2(3, -2)
 shape = SubResource("RectangleShape2D_ma4wa")
 
 [node name="Timer" type="Timer" parent="." unique_id=1114637133]
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

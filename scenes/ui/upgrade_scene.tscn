@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://vyybb55i0o7h"]
+
+[ext_resource type="Script" uid="uid://31673ixceump" path="res://scenes/ui/upgrade_scene.gd" id="1_rbmv3"]
+[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="2_wjri6"]
+
+[node name="UpgradeScene" type="CanvasLayer" unique_id=742733749]
+process_mode = 3
+script = ExtResource("1_rbmv3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=637651781]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.22352941)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=2063330174]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 646.0
+
+[node name="CardContainer" type="HBoxContainer" parent="ColorRect/CenterContainer" unique_id=668283174]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BannerLabel" type="Label" parent="ColorRect" unique_id=794908087]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -233.0
+offset_top = 21.0
+offset_right = 233.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wjri6")
+theme_override_font_sizes/font_size = 45
+text = "UPGRADE UNLOCKED"
+horizontal_alignment = 1
+vertical_alignment = 1

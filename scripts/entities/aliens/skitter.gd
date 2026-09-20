@@ -1,8 +1,6 @@
-# skitter.gd -> Ngatur behaviour alien skitter 
 extends AlienBase
 
 func _ready() -> void:
-	# Ngambil ready dari parent
 	super._ready() 
 	
 	if not hitbox_area:
@@ -12,6 +10,8 @@ func _ready() -> void:
 	if hitbox_area:
 		hitbox_area.body_entered.connect(_on_swarmer_hit_body)
 		hitbox_area.area_entered.connect(_on_swarmer_hit_area)
+	
+	_attach_trail(data.color)
 
 func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(player): 
@@ -40,3 +40,10 @@ func _deal_contact_damage(target_player: Node2D) -> void:
 	print("DEBUGLOG Skitter: Menabrak Player! Memberikan damage: ", damage_amount)
 	target_player.take_damage(damage_amount)
 	die()
+
+func _attach_trail(alien_color: Color) -> void:
+	var trail_scene = preload("res://scenes/effects/motion_trail.tscn")
+	if trail_scene:
+		var trail = trail_scene.instantiate() as MotionTrail
+		add_child(trail)
+		trail.set_trail_color(alien_color) # Ikut warna unik musuh!

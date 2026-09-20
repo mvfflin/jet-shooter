@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="AlienData" format=3 uid="uid://0t3ec6dc445s"]
+
+[ext_resource type="Script" uid="uid://bsr5hy8pfgj1o" path="res://resources/alien_data.gd" id="1_wulk7"]
+[ext_resource type="Texture2D" uid="uid://bdk1a3k5thjac" path="res://assets/sprites/entities/aliens/spawnling.png" id="2_uww5e"]
+
+[resource]
+script = ExtResource("1_wulk7")
+type = 2
+name = "Spawnling"
+max_hp = 10.0
+speed = 60.0
+texture = ExtResource("2_uww5e")
+color = Color(0.68, 0.07480001, 0.08488651, 1)
+sprite_size = 38
+hitbox_radius = 14
+xp_value = 20
+death_shake_intensity = 10.0
+death_shake_duration = 0.22
+death_zoom_punch = 0.06
+death_particle_count = 36
+death_particle_color = Color(0.7, 0.2, 0.9, 1)
+death_particle_scale = 2.0
+metadata/_custom_type_script = "uid://bsr5hy8pfgj1o"

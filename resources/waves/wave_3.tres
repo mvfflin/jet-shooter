@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WaveConfig" format=3 uid="uid://brsse1w0k7ciq"]
+
+[ext_resource type="Script" uid="uid://bsr5hy8pfgj1o" path="res://resources/alien_data.gd" id="1_pn4d1"]
+[ext_resource type="Script" uid="uid://cvrhlrpienk2x" path="res://resources/wave_config.gd" id="2_ecy8v"]
+[ext_resource type="Resource" uid="uid://ca2pq7r1kgrqg" path="res://resources/aliens/skitter.tres" id="2_skitter"]
+[ext_resource type="Resource" uid="uid://bujs75ww8fkw2" path="res://resources/aliens/ocular_drone.tres" id="3_ocular"]
+[ext_resource type="Resource" uid="uid://0t3ec6dc445s" path="res://resources/aliens/spawnling.tres" id="4_spawnling"]
+
+[resource]
+script = ExtResource("2_ecy8v")
+wave_number = 3
+duration_seconds = 45.0
+spawn_alien_chance = 0.4
+start_alien_interval = Vector2(2, 3.2)
+end_alien_interval = Vector2(1, 1.5)
+initial_asteroids_count = 11
+end_asteroid_interval = Vector2(0.6, 1.2)
+allowed_aliens = Array[ExtResource("1_pn4d1")]([ExtResource("2_skitter"), ExtResource("3_ocular"), ExtResource("4_spawnling")])
+metadata/_custom_type_script = "uid://cvrhlrpienk2x"

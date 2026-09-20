@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://b7kh5csobmayg"]
+
+[ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_au4c7"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_icon"]
+
+[resource]
+script = ExtResource("1_au4c7")
+id = "upg_weapon_bomb"
+title = "R3ZE"
+description = "Peluru bisa meledak BOOOM"
+icon = ExtResource("2_icon")
+category = 1
+stat_name = "attack_damage"
+stat_value = 1.5
+weapon_type = 4
+metadata/_custom_type_script = "uid://8ixonquhf2es"

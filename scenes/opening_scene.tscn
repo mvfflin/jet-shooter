@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://ckr8tac6uckig"]
+
+[ext_resource type="Script" uid="uid://c1mia32js067h" path="res://scenes/opening_scene.gd" id="1_2w8es"]
+[ext_resource type="FontFile" uid="uid://ml8lq3hqc5lk" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd.otf" id="1_yrpo6"]
+[ext_resource type="Shader" uid="uid://c5gnaqc8onwcr" path="res://shaders/perspective_crawl.gdshader" id="3_61xuo"]
+[ext_resource type="Texture2D" uid="uid://cn2oy45c6qjds" path="res://assets/logo.png" id="3_vtxer"]
+[ext_resource type="FontFile" uid="uid://cb0folkxl8hdu" path="res://assets/sprites/fonts/News_Gothic/News_Gothic/NewsGothicStd-Bold.otf" id="4_j2imu"]
+[ext_resource type="Shader" uid="uid://cjtn5ssqls2ds" path="res://shaders/glitch.gdshader" id="5_6xt31"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6xt31"]
+shader = ExtResource("3_61xuo")
+shader_parameter/perspective = 0.8
+shader_parameter/width_scale = 1.3
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yck6r"]
+viewport_path = NodePath("CanvasLayer/CrawlContainer/SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vtxer"]
+shader = ExtResource("5_6xt31")
+shader_parameter/glitch_intensity = 0.0
+
+[node name="OpeningScene" type="Node2D" unique_id=682741184]
+script = ExtResource("1_2w8es")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=567707853]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=351270211]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IntroLabel" type="Label" parent="CanvasLayer" unique_id=1105154811]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -24.5
+offset_right = 118.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.29454538, 0.6452718, 0.9401083, 1)
+theme_override_fonts/font = ExtResource("1_yrpo6")
+text = "A long time ago in a galaxy far,
+far away...."
+
+[node name="TitleLogo" type="Control" parent="CanvasLayer" unique_id=591205132]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/TitleLogo" unique_id=1443517222]
+custom_maximum_size = Vector2(256, 128)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1280.0
+offset_top = -720.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vtxer")
+
+[node name="CrawlContainer" type="Control" parent="CanvasLayer" unique_id=1092574297]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/CrawlContainer" unique_id=720397594]
+transparent_bg = true
+size = Vector2i(1152, 2000)
+
+[node name="CrawlLabel" type="RichTextLabel" parent="CanvasLayer/CrawlContainer/SubViewport" unique_id=1026483062]
+custom_minimum_size = Vector2(0, 2000)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.6508179, 0.58789104, 0.06578918, 1)
+theme_override_fonts/normal_font = ExtResource("4_j2imu")
+theme_override_font_sizes/normal_font_size = 37
+text = "Long before humanity learned to reach the stars, the universe was already home to an ancient race known as the Star Children. They were not gods, but they were the closest thing the universe had ever created to them. Born from the light of dying stars, the Star Children possessed an extraordinary ability: they could create stars. Wherever they traveled, dead systems came back to life. Frozen planets warmed, and new worlds were born beneath newborn suns.
+
+For thousands of years, the Star Children maintained the balance of the cosmos. Until something came from the darkness... They called themselves Nebula. No one knows where they came from or what they truly are. They appeared without warning, traveling through space in enormous vessels, consuming the light of stars wherever they went.
+
+Their purpose was simple: Destroy every star in the universe. And the Star Children were the only beings capable of stopping them. So Nebula hunted them without mercy. One by one, the Star Children were found and slaughtered.
+
+Civilizations that once depended on their light fell into darkness. Entire solar systems became graveyards. The Star Children fought back, but they were too few...
+
+Until there was only one left."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 3
+justification_flags = 171
+
+[node name="CrawlViewportTexture" type="TextureRect" parent="CanvasLayer/CrawlContainer" unique_id=1868886085]
+material = SubResource("ShaderMaterial_6xt31")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_yck6r")
+
+[node name="GlitchOverlay" type="ColorRect" parent="CanvasLayer" unique_id=1494561089]
+material = SubResource("ShaderMaterial_vtxer")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)

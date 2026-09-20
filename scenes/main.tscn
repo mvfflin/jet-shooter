@@ -5,9 +5,38 @@
 [ext_resource type="PackedScene" uid="uid://1mmbps2pxg5d" path="res://scenes/entities/player/player.tscn" id="2"]
 [ext_resource type="Script" uid="uid://cvrhlrpienk2x" path="res://resources/wave_config.gd" id="3_jyhfs"]
 [ext_resource type="Resource" uid="uid://cah88cecv6x66" path="res://resources/waves/wave_1.tres" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://c315sqtaxc22d" path="res://scripts/managers/upgrade_manager.gd" id="6_85g3d"]
+[ext_resource type="Resource" uid="uid://cgarceu8mj4if" path="res://resources/waves/wave_2.tres" id="6_gqmmt"]
+[ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="7_choun"]
+[ext_resource type="Resource" uid="uid://brsse1w0k7ciq" path="res://resources/waves/wave_3.tres" id="7_yc10j"]
+[ext_resource type="Resource" uid="uid://i4as1umnwnfx" path="res://resources/waves/wave_4.tres" id="8_jscy8"]
+[ext_resource type="Resource" uid="uid://ow4ytrd76uwp" path="res://resources/upgrade/upg_damage.tres" id="8_ya4ey"]
+[ext_resource type="Resource" uid="uid://d2i7covhw8xxx" path="res://resources/upgrade/upg_weapon_spread.tres" id="9_eb6dy"]
+[ext_resource type="Resource" uid="uid://x1h4j0mg2pga" path="res://resources/waves/wave_5.tres" id="9_pm3ni"]
+[ext_resource type="Resource" uid="uid://c6r4lvw8e3xg2" path="res://resources/upgrade/upg_fire_rate.tres" id="10_eb6dy"]
+[ext_resource type="Resource" uid="uid://badog86xumgpd" path="res://resources/upgrade/upg_magnet.tres" id="11_trceg"]
+[ext_resource type="Resource" uid="uid://b7kh5csobmayg" path="res://resources/upgrade/upg_weapon_bomb.tres" id="12_jbj1t"]
+[ext_resource type="Resource" uid="uid://daqijgp4wtbbp" path="res://resources/upgrade/upg_weapon_chain.tres" id="13_muem4"]
+[ext_resource type="PackedScene" uid="uid://cbrd6a6fwu2to" path="res://scenes/ui/hud.tscn" id="13_trceg"]
+[ext_resource type="Resource" uid="uid://eg1jrn0p05mr" path="res://resources/upgrade/upg_weapon_ice.tres" id="14_dp3eg"]
+[ext_resource type="Resource" uid="uid://durr6ad37lbqh" path="res://resources/upgrade/upg_weapon_laser.tres" id="15_0ld40"]
+[ext_resource type="Script" uid="uid://c54ot0wa6u2wh" path="res://scripts/managers/juice_manager.gd" id="16_muem4"]
+[ext_resource type="Texture2D" uid="uid://bx0kqo8vxvnut" path="res://assets/sprites/entities/player/player1.png" id="22_og1vs"]
+[ext_resource type="PackedScene" uid="uid://dsyn0k8ch35nx" path="res://scenes/ui/dialog_box.tscn" id="24_2wyq8"]
+[ext_resource type="Shader" uid="uid://cjtn5ssqls2ds" path="res://shaders/glitch.gdshader" id="24_y6deb"]
+[ext_resource type="PackedScene" uid="uid://bhef244eogsbt" path="res://scenes/ui/pause_menu.tscn" id="25_og1vs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_og1vs"]
+shader = ExtResource("24_y6deb")
+shader_parameter/glitch_intensity = 0.0
 
 [node name="Main" type="Node2D" unique_id=883856290]
 script = ExtResource("1_tbgi4")
+
+[node name="Background" type="ColorRect" parent="." unique_id=72572220]
+offset_right = 2173.0
+offset_bottom = 1325.0
+color = Color(0.04, 0.020799998, 0.022400001, 1)
 
 [node name="YSort" type="Node2D" parent="." unique_id=679099556]
 y_sort_enabled = true
@@ -17,6 +46,62 @@ y_sort_enabled = true
 [node name="Player" parent="." unique_id=373738498 instance=ExtResource("2")]
 position = Vector2(400, 300)
 
-[node name="WaveManager" type="Node" parent="." unique_id=1599154272]
+[node name="WaveManager" type="Node" parent="." unique_id=1599154272 node_paths=PackedStringArray("wave_banner_label", "dialog_box")]
 script = ExtResource("1")
-wave_configs = Array[ExtResource("3_jyhfs")]([ExtResource("4_jyhfs")])
+wave_configs = Array[ExtResource("3_jyhfs")]([ExtResource("4_jyhfs"), ExtResource("6_gqmmt"), ExtResource("7_yc10j"), ExtResource("8_jscy8"), ExtResource("9_pm3ni")])
+wave_banner_label = NodePath("../CanvasLayer/WaveBannerLabel")
+dialog_box = NodePath("../CanvasLayer/DialogBox")
+
+[node name="UpgradeManager" type="Node" parent="." unique_id=617744825 node_paths=PackedStringArray("level_up_label")]
+script = ExtResource("6_85g3d")
+upgrade_pool = Array[ExtResource("7_choun")]([ExtResource("8_ya4ey"), ExtResource("9_eb6dy"), ExtResource("10_eb6dy"), ExtResource("11_trceg"), ExtResource("12_jbj1t"), ExtResource("13_muem4"), ExtResource("14_dp3eg"), ExtResource("15_0ld40")])
+level_up_label = NodePath("../CanvasLayer/LevelUpLabel")
+
+[node name="JuiceManager" type="Node" parent="." unique_id=2021704181]
+script = ExtResource("16_muem4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=765310399]
+
+[node name="LevelUpLabel" type="Label" parent="CanvasLayer" unique_id=2032371298]
+offset_left = 1019.0
+offset_top = 14.0
+offset_right = 1119.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.85490197, 0.76862746, 0.019607844, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="WaveBannerLabel" type="Label" parent="CanvasLayer" unique_id=2099004276]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.5
+offset_top = -27.5
+offset_right = 147.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+
+[node name="Hud" parent="CanvasLayer" unique_id=1388186122 instance=ExtResource("13_trceg")]
+segment_full_tex = ExtResource("22_og1vs")
+
+[node name="DialogBox" parent="CanvasLayer" unique_id=611914150 instance=ExtResource("24_2wyq8")]
+
+[node name="GlitchOverlay" type="ColorRect" parent="CanvasLayer" unique_id=1810253459]
+material = SubResource("ShaderMaterial_og1vs")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="PauseMenu" parent="CanvasLayer" unique_id=286197730 instance=ExtResource("25_og1vs")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1501435398]
+offset_right = 2170.0
+offset_bottom = 1321.0
