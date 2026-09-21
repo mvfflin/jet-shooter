@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var data: AlienData
 @export var xp_orb_scene: PackedScene = preload("res://scenes/entities/xporb/xporb.tscn")
+@export var hp_orb_scene: PackedScene = preload("res://scenes/entities/hporb/hporb.tscn")
 @export var take_damage_sfx: AudioStream = preload("res://assets/sounds/sfx/take_damage.wav")
 
 var current_hp: float = 1.0
@@ -129,6 +130,7 @@ func die() -> void:
 
 	print("DEBUGLOG Alien: Alien mati di posisi ", global_position)
 	_spawn_xp_orb()
+	_try_spawn_hp()
 	queue_free()
 
 func _spawn_xp_orb() -> void:
@@ -139,6 +141,13 @@ func _spawn_xp_orb() -> void:
 			orb.xp_amount = data.xp_value
 			
 		get_parent().call_deferred("add_child", orb)
+
+func _try_spawn_hp() -> void:
+	if randf() <= 0.03:
+		if hp_orb_scene:
+			var hp_orb = hp_orb_scene.instantiate()
+			hp_orb.global_position = global_position
+			get_parent().call_deferred("add_child", hp_orb)
 
 func apply_slow(slow_factor: float, duration: float) -> void:
 	if not data: return

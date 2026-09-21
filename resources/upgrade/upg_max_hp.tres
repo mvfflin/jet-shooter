@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://bo4biqbpu154t"]
+
+[ext_resource type="Texture2D" uid="uid://3rbc3a17oaep" path="res://assets/sprites/upgrade/upg_max_hp.png" id="1_p7mnw"]
+[ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_rx6dn"]
+
+[resource]
+script = ExtResource("1_rx6dn")
+id = "upg_max_hp"
+title = "Babalu Aye"
+description = "Meningkatkan max hp player, juga ngeheal"
+icon = ExtResource("1_p7mnw")
+stat_name = "max_hp"
+stat_value = 5.0
+metadata/_custom_type_script = "uid://8ixonquhf2es"

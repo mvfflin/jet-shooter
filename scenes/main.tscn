@@ -21,6 +21,8 @@
 [ext_resource type="Resource" uid="uid://eg1jrn0p05mr" path="res://resources/upgrade/upg_weapon_ice.tres" id="14_dp3eg"]
 [ext_resource type="Resource" uid="uid://durr6ad37lbqh" path="res://resources/upgrade/upg_weapon_laser.tres" id="15_0ld40"]
 [ext_resource type="Script" uid="uid://c54ot0wa6u2wh" path="res://scripts/managers/juice_manager.gd" id="16_muem4"]
+[ext_resource type="Resource" uid="uid://bo4biqbpu154t" path="res://resources/upgrade/upg_max_hp.tres" id="20_vxglm"]
+[ext_resource type="Resource" uid="uid://dgx4bvu0ipn0" path="res://resources/upgrade/upg_movement_speed.tres" id="21_2f3dj"]
 [ext_resource type="Texture2D" uid="uid://bx0kqo8vxvnut" path="res://assets/sprites/entities/player/player1.png" id="22_og1vs"]
 [ext_resource type="PackedScene" uid="uid://dsyn0k8ch35nx" path="res://scenes/ui/dialog_box.tscn" id="24_2wyq8"]
 [ext_resource type="Shader" uid="uid://cjtn5ssqls2ds" path="res://shaders/glitch.gdshader" id="24_y6deb"]
@@ -54,7 +56,7 @@ dialog_box = NodePath("../CanvasLayer/DialogBox")
 
 [node name="UpgradeManager" type="Node" parent="." unique_id=617744825 node_paths=PackedStringArray("level_up_label")]
 script = ExtResource("6_85g3d")
-upgrade_pool = Array[ExtResource("7_choun")]([ExtResource("8_ya4ey"), ExtResource("9_eb6dy"), ExtResource("10_eb6dy"), ExtResource("11_trceg"), ExtResource("12_jbj1t"), ExtResource("13_muem4"), ExtResource("14_dp3eg"), ExtResource("15_0ld40")])
+upgrade_pool = Array[ExtResource("7_choun")]([ExtResource("8_ya4ey"), ExtResource("9_eb6dy"), ExtResource("10_eb6dy"), ExtResource("11_trceg"), ExtResource("12_jbj1t"), ExtResource("13_muem4"), ExtResource("14_dp3eg"), ExtResource("15_0ld40"), ExtResource("20_vxglm"), ExtResource("21_2f3dj")])
 level_up_label = NodePath("../CanvasLayer/LevelUpLabel")
 
 [node name="JuiceManager" type="Node" parent="." unique_id=2021704181]

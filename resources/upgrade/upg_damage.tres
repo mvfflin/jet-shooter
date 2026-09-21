@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://ow4ytrd76uwp"]
 
+[ext_resource type="Texture2D" uid="uid://d1j06jju3ep4f" path="res://assets/sprites/upgrade/upg_damage.png" id="1_oraks"]
 [ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_pjnnh"]
-[ext_resource type="Texture2D" uid="uid://bn3bdqu0lmjfk" path="res://assets/sprites/ui/upg.png" id="2_icon"]
 
 [resource]
 script = ExtResource("1_pjnnh")
 id = "upg_damage"
-title = "Luthor III"
+title = "Hero"
 description = "Meningkatkan damage udah itu aja"
-icon = ExtResource("2_icon")
+icon = ExtResource("1_oraks")
 stat_name = "attack_damage"
 stat_value = 2.0
 metadata/_custom_type_script = "uid://8ixonquhf2es"

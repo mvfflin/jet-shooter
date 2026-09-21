@@ -32,6 +32,7 @@ clip_text = true
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1012862548]
 custom_minimum_size = Vector2(160, 120)
 layout_mode = 2
+expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=590851980]

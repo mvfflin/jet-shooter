@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://daqijgp4wtbbp"]
 
+[ext_resource type="Texture2D" uid="uid://douyxvoxxx1po" path="res://assets/sprites/upgrade/upg_weapon_chain.png" id="1_mk6d5"]
 [ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_p8b53"]
-[ext_resource type="Texture2D" uid="uid://bn3bdqu0lmjfk" path="res://assets/sprites/ui/upg.png" id="2_icon"]
 
 [resource]
 script = ExtResource("1_p8b53")
 id = "upg_weapon_chain"
-title = "YaKa"
+title = "Uzumaki"
 description = "Peluru bisa menyerang 5 musuh sekaligus dalam radius"
-icon = ExtResource("2_icon")
+icon = ExtResource("1_mk6d5")
 category = 1
 weapon_type = 3
 metadata/_custom_type_script = "uid://8ixonquhf2es"

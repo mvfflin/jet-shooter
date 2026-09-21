@@ -13,6 +13,7 @@ enum Size { LARGE, MEDIUM, SMALL }
 @export var small_asteroid_scene: PackedScene
 @export var alien_base_scene: PackedScene = preload("res://scenes/entities/aliens/alien_base.tscn")
 @export var xp_orb_scene: PackedScene = preload("res://scenes/entities/xporb/xporb.tscn")
+@export var hp_orb_scene: PackedScene = preload("res://scenes/entities/hporb/hporb.tscn")
 @export var skitter_script: Script = preload("res://scripts/entities/aliens/skitter.gd")
 @export var explosion: AudioStream = preload("res://assets/sounds/sfx/ring_swift.wav")
 
@@ -87,6 +88,7 @@ func destroy() -> void:
 			get_parent().call_deferred("add_child", sub_ast)
 
 	_try_spawn_alien()
+	_try_spawn_hp()
 	queue_free()
 
 func _spawn_burst(amount: int, color: Color, scale_factor: float) -> void:
@@ -152,3 +154,10 @@ func _try_spawn_alien() -> void:
 			alien.data = chosen_data
 			alien.global_position = global_position
 			get_parent().call_deferred("add_child", alien)
+
+func _try_spawn_hp() -> void:
+	if randf() <= 0.8:
+		if hp_orb_scene:
+			var hp_orb = hp_orb_scene.instantiate()
+			hp_orb.global_position = global_position
+			get_parent().call_deferred("add_child", hp_orb)

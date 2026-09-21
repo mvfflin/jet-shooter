@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://badog86xumgpd"]
 
+[ext_resource type="Texture2D" uid="uid://c8ts7v5klcbg8" path="res://assets/sprites/upgrade/upg_magnet_radius.png" id="1_lc4yj"]
 [ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_vo0j2"]
-[ext_resource type="Texture2D" uid="uid://bn3bdqu0lmjfk" path="res://assets/sprites/ui/upg.png" id="2_icon"]
 
 [resource]
 script = ExtResource("1_vo0j2")
 id = "upg_magnet"
-title = "EXP Hooker V2"
+title = "The Getter"
 description = "Meningkatkan jangkauan magnet exp"
-icon = ExtResource("2_icon")
+icon = ExtResource("1_lc4yj")
 stat_name = "magnet_radius"
 stat_value = 30.0
 metadata/_custom_type_script = "uid://8ixonquhf2es"

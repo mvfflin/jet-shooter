@@ -25,7 +25,7 @@ var passive_energy_rate: float = 20.0
 # Progression Stats
 var current_level: int = 1
 var current_xp: int = 0
-var xp_to_next_level: int = 100
+var xp_to_next_level: int = 10
 var waves_survived: int = 0
 
 # Multi-Weapon Trait System & Progression Tracking
@@ -110,6 +110,15 @@ func add_xp(amount: int) -> void:
 		level_up.emit(current_level)
 		
 	xp_changed.emit(current_xp, xp_to_next_level)
+
+func add_hp(amount: int) -> void:
+	if current_hp >= max_hp:
+		return
+
+	current_hp = min(current_hp + amount, max_hp)
+	print("DEBUGLOG DataManager: Tambah HP +", amount, " | Total: ", current_hp, "/", xp_to_next_level)
+		
+	hp_changed.emit(current_hp, max_hp)
 
 func add_energy(amount: float) -> void:
 	if current_energy >= max_energy: return

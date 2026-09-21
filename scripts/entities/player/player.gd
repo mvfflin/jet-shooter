@@ -5,6 +5,7 @@ const ROTATION_SPEED = 15.0
 var time_since_last_shot: float = 0.0
 var can_shoot: bool = true
 var is_dead: bool = false
+var is_invincible: bool = false # Status kebal
 
 @export var bullet_scene: PackedScene = preload("res://scenes/entities/bullet/bullet.tscn")
 @export var laser_scene: PackedScene = preload("res://scenes/entities/bullet/laser_beam.tscn")
@@ -14,6 +15,7 @@ var is_dead: bool = false
 @export var shoot_sfx: AudioStream = preload("res://assets/sounds/sfx/shoot.wav")
 @export var scan_samples: int = 12
 @export var scan_radius: float = 200.0 
+@export var invincibility_duration: float = 0.5
 
 func _ready() -> void:
 	add_to_group("Player")
@@ -219,7 +221,7 @@ func _spawn_single_modular_bullet(spawn_pos: Vector2, dir: Vector2, traits: Arra
 	get_parent().add_child(projectile)
 
 func take_damage(amount: float) -> void:
-	if is_dead or not DataManager: return
+	if is_dead or is_invincible or not DataManager: return
 
 	DataManager.current_hp -= amount
 	print("DEBUGLOG Player: Terkena damage ", amount, " | Sisa HP: ", DataManager.current_hp)
@@ -227,19 +229,47 @@ func take_damage(amount: float) -> void:
 	DataManager.hp_changed.emit(DataManager.current_hp, DataManager.max_hp)
 
 	AudioManager.play_sfx(take_damage_sfx)
-	_play_damage_flash()
 
 	if DataManager.current_hp <= 0:
 		is_dead = true
 		_trigger_game_over()
+	else:
+		_trigger_invincibility()
 
-func _play_damage_flash() -> void:
+func _trigger_invincibility() -> void:
+	is_invincible = true
+	
+	var collision_shape = get_node_or_null("CollisionShape2D")
+	if collision_shape:
+		collision_shape.set_deferred("disabled", true)
+
+	_play_damage_flash(invincibility_duration)
+
+	await get_tree().create_timer(invincibility_duration).timeout
+
+	is_invincible = false
+	if collision_shape:
+		collision_shape.set_deferred("disabled", false)
+
+func _play_damage_flash(duration: float) -> void:
 	var sprite = get_node_or_null("Sprite2D")
 	if not sprite: return
 
-	var tween = create_tween()
-	sprite.modulate = Color.RED
-	tween.tween_property(sprite, "modulate", Color.WHITE, 0.25).set_trans(Tween.TRANS_SINE)
+	var flash_color = Color(3.5, 0.2, 0.2, 1.0) 
+	var transparent_color = Color(1.0, 1.0, 1.0, 0.15) 
+	
+	var cycle_duration = 0.05 
+	var loop_count = max(1, int(duration / cycle_duration))
+
+	var tween = create_tween().set_loops(loop_count)
+	
+	tween.tween_property(sprite, "modulate", flash_color, cycle_duration * 0.4)
+	tween.tween_property(sprite, "modulate", transparent_color, cycle_duration * 0.6)
+	
+	tween.finished.connect(func():
+		if is_instance_valid(sprite):
+			sprite.modulate = Color.WHITE
+	)
 
 func _trigger_game_over() -> void:
 	print("DEBUGLOG Player: HP habis! Game Over.")

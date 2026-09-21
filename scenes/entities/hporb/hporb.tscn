@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ctjnse5y236sg"]
+
+[ext_resource type="Script" uid="uid://dxalr17r0r3ig" path="res://scripts/entities/hporb/hporb.gd" id="1_ve83d"]
+[ext_resource type="Texture2D" uid="uid://dr8o7u43kwjjl" path="res://assets/sprites/entities/hp/hp.png" id="2_ve83d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yck6r"]
+radius = 5.8309517
+
+[node name="Hporb" type="Area2D" unique_id=168632553]
+collision_layer = 8
+script = ExtResource("1_ve83d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1242453801]
+position = Vector2(-8.6426735e-07, 0.5)
+scale = Vector2(0.75000006, 0.8125)
+texture = ExtResource("2_ve83d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=63449784]
+shape = SubResource("CircleShape2D_yck6r")

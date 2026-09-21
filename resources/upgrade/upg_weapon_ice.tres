@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://eg1jrn0p05mr"]
 
+[ext_resource type="Texture2D" uid="uid://dgdxu72kuip55" path="res://assets/sprites/upgrade/upg_weapon_ice.png" id="1_aopl8"]
 [ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_aovbb"]
-[ext_resource type="Texture2D" uid="uid://bn3bdqu0lmjfk" path="res://assets/sprites/ui/upg.png" id="2_icon"]
 
 [resource]
 script = ExtResource("1_aovbb")
 id = "upg_weapon_ice"
-title = "HOTH"
+title = "Yuki Onna"
 description = "Peluru dingin yang slow lawan seperti admin"
-icon = ExtResource("2_icon")
+icon = ExtResource("1_aopl8")
 category = 1
 weapon_type = 2
 metadata/_custom_type_script = "uid://8ixonquhf2es"

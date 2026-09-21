@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://durr6ad37lbqh"]
 
 [ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_i4ao5"]
-[ext_resource type="Texture2D" uid="uid://bn3bdqu0lmjfk" path="res://assets/sprites/ui/upg.png" id="2_icon"]
+[ext_resource type="Texture2D" uid="uid://c81qbco2owykl" path="res://assets/sprites/upgrade/upg_weapon_laser.png" id="1_qngy7"]
 
 [resource]
 script = ExtResource("1_i4ao5")
 id = "upg_weapon_laser"
-title = "LASER X-3000"
+title = "Deus Ex Machina"
 description = "Peluru menjadi beam laser"
-icon = ExtResource("2_icon")
+icon = ExtResource("1_qngy7")
 category = 1
 weapon_type = 5
 metadata/_custom_type_script = "uid://8ixonquhf2es"

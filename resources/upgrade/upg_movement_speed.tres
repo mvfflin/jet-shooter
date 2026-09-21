@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://dgx4bvu0ipn0"]
+
+[ext_resource type="Texture2D" uid="uid://dr27w41smhf8s" path="res://assets/sprites/upgrade/upg_movement_speed.png" id="1_c0xer"]
+[ext_resource type="Script" uid="uid://8ixonquhf2es" path="res://resources/upgrade_data.gd" id="1_l7s7n"]
+
+[resource]
+script = ExtResource("1_l7s7n")
+id = "upg_movement_speed"
+title = "Hermes"
+description = "Meningkatkan kecepatan gerak player"
+icon = ExtResource("1_c0xer")
+stat_name = "move_speed"
+stat_value = 80.0
+metadata/_custom_type_script = "uid://8ixonquhf2es"
