@@ -156,7 +156,7 @@ func _try_spawn_alien() -> void:
 			get_parent().call_deferred("add_child", alien)
 
 func _try_spawn_hp() -> void:
-	if randf() <= 0.8:
+	if randf() <= 0.03:
 		if hp_orb_scene:
 			var hp_orb = hp_orb_scene.instantiate()
 			hp_orb.global_position = global_position
